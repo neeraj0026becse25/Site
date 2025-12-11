@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Navbar</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Slider container */
+        .slider {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+
+            /* Shadow + Smooth edges */
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover glow effect */
+        .slider:hover {
+            transform: scale(1.04);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+        }
+
+        .slider img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            animation: slide 3s infinite;
+        }
+
+        .slider img:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .slider img:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .slider img:nth-child(3) {
+            animation-delay: 2s;
+        }
+
+        @keyframes slide {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="d-flex justify-content-center">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary rounded shadow px-4 mt-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Dropdown</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search">
+                        <button class="btn btn-outline-success">Search</button>
+                    </form>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <!-- FLEX IMAGE SLIDERS -->
+    <div class="container-fluid vh-100 d-flex justify-content-center align-items-center gap-4">
+
+        <div class="slider">
+            <img src="parrot.avif">
+            <img src="galaxy.jpg.jpg">
+            <img src="courageman.avif">
+        </div>
+
+        <div class="slider">
+            <img src="giyu.png">
+            <img src="ss.png">
+            <img src="download (1).jpg">
+        </div>
+
+        <div class="slider">
+            <img src="download (2).jpg">
+            <img src="download.jpg">
+            <img src="images (1).jpg">
+        </div>
+
+        <div class="slider">
+            <img src="images (2).jpg">
+            <img src="images.jpg">
+            <img src="d3.jpg">
+        </div>
+
+    </div>
+
+</body>
+
+</html>
